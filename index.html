@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Telegram Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 MyPlay Zone</h1>
+            <div class="user-info">
+                Привет, <span id="user-first-name">Гость</span>!
+            </div>
+        </header>
+
+        <main>
+            <section class="balance-section">
+                <h2>Ваш баланс</h2>
+                <div class="balance-amount" id="user-balance">0 TON</div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="requestDeposit()">Пополнить</button>
+                    <button class="btn btn-secondary" onclick="claimDailyBonus()">Забрать ежедневный бонус</button>
+                </div>
+            </section>
+
+            <section class="games-section">
+                <h2>Доступные игры</h2>
+                <div class="games-grid">
+                    <div class="game-card" onclick="launchGame('dice')">
+                        <div class="game-icon">🎲</div>
+                        <h3>Кости</h3>
+                        <p>Испытай удачу!</p>
+                    </div>
+                    <div class="game-card" onclick="launchGame('slots')">
+                        <div class="game-icon">🎰</div>
+                        <h3>Слоты</h3>
+                        <p>Крути барабаны!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Это демонстрационное приложение. Для работы требуется запуск внутри Telegram.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
